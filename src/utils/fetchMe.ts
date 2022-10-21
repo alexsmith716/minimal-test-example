@@ -23,11 +23,9 @@ export async function fetchMe() {
 	try {
 		const response = await s3Client.send(getFetchMe);
 		const stream = response.Body as ReadableStream;
-		//const data = await doStreamToString(stream);
 		console.log('+++ fetchMe > stream: ', response);
 		return Promise.resolve({ result: "Hello" });
 
-		//return Promise.resolve({ result: data });
 	} catch (error) {
 		return Promise.reject({ result: 'Error when attempting to fetch resource.' });
 	}
