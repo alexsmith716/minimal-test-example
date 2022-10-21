@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { fetchMe } from './fetchMe';
+import { fetchMe } from '../utils/fetchMe';
 
 export default function TestPage() {
 
